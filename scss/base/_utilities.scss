@@ -1,0 +1,22 @@
+
+
+
+//MIXIN
+@mixin d-flex ($display,$justify,$flex-wrap) {
+    display: $display;
+    justify-content: $justify;
+    flex-wrap: $flex-wrap;
+}
+
+//EXTEND
+.d-flex {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+

@@ -1,0 +1,130 @@
+main {
+
+
+
+  .bg_image {
+    @extend .d-flex; 
+    height: 91vh;
+
+
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0.527),
+        rgba(0, 0, 0, 0.425)),
+      url(/images/cementerio.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    .bg__image__titulo {
+      font-size: 60px;
+      font-weight: bold;
+      color: rgba(197, 197, 197, 0.658);
+
+
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px;
+      font-size: 35px;
+      font-weight: bold;
+      background-image: linear-gradient(to right, #676767c2, $color-2);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    
+
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid rgb(255, 255, 255);
+      animation: arrow-down-animation 1s infinite alternate;
+      transform: translateX(-45%);
+      bottom: 24px;
+      position: absolute;
+
+      @keyframes arrow-down-animation {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(10px);
+        }
+      }
+    }
+
+
+    .producto__titulo {
+      text-align: center;
+      margin: 30px;
+     
+      font-weight: bold;
+    }
+
+  }
+
+
+  //productos 
+
+  .productos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+    gap: 2em;
+
+
+  }
+
+  .producto img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 40px
+  }
+
+  .producto {
+
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+
+    background-color: white;
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 16px;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.185);
+      transition: 0.3s;
+    }
+    
+  }
+
+  .producto p {
+    padding: 10px;
+  }
+
+
+
+  h3 {
+    text-align: center;
+    margin: 30px;
+    font-size: 35px;
+    font-weight: bold;
+
+  }
+
+}
+
+
+
