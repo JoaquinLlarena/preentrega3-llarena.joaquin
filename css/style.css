@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "outfit";
   background-color: rgb(196, 195, 195);
@@ -196,8 +200,11 @@ main .producto:hover {
   box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.185);
   transition: 0.3s;
 }
-main .producto p {
+main .producto a {
   padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px;
 }
 main h3 {
   text-align: center;
@@ -402,29 +409,96 @@ main .bgimage-usuario .login-box a:hover {
   .container-fluid .navbar-hover li:hover a {
     transform: scale(1.1);
   }
-  h2 {
-    text-align: center;
-    margin: 0px;
-    font-size: 35px;
-    font-weight: bold;
+  main .producto img {
+    width: 70%;
   }
-  .grid-container {
+  main .producto {
+    width: 70%;
+  }
+  main .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 100%);
+    grid-template-columns: repeat(1, 1fr);
   }
-  .grid-container .grid-item {
-    margin-bottom: 10px;
-    display: flex;
-  }
-  .grid-container .grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.3s;
-  }
-  .grid-container .grid-item:nth-child(3) {
+  main .grid-container .grid-item:nth-child(3) {
     grid-column-start: span 1;
   }
+  main .cartas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main .card {
+    width: 75%;
+  }
+  main .imagebg {
+    height: 91vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.486)), url(../images/local1.jpg);
+    background-size: cover;
+    background-position: center center;
+    font-size: 40px;
+    margin-bottom: 55px;
+  }
+  main .imagebg_h2 {
+    text-align: center;
+    font-size: 50px;
+  }
+  main .bgimage-usuario .login-box {
+    width: 80%;
+  }
+  main .metodos-pago .metodos-pago-lista {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+main .titulo__pago {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  background-color: #fda310;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+main h3 {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  height: 15vh;
+}
+main .metodos-pago {
+  background-color: rgba(219, 219, 219, 0.7882352941);
+  padding: 20px;
+  height: 100vh;
+}
+main .metodos-pago .metodos-pago-lista {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+main .metodos-pago .metodos-pago-lista .metodos-pago-item img {
+  width: 200px;
+  height: 120px;
+}
+main .metodos-pago .metodos-pago-item {
+  margin: 10px;
+  text-align: center;
+}
+main .metodos-pago .metodos-pago-item span {
+  font-size: 23px;
+  font-weight: bold;
+}
+main .metodos-pago h2 {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  background-color: #fda310;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+}
+main .metodos-pago-item span {
+  display: block;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
